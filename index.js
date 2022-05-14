@@ -1,1 +1,3 @@
-console.log('Project start');
+const { processGiveAwayResults } = require('./instagram-giveaway/main');
+
+processGiveAwayResults();
