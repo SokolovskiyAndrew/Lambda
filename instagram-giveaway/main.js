@@ -14,7 +14,7 @@ function getFileContent (dirName, fileName) {
                 console.warn('file access error',err);
             }
 
-            resolve(content.split('\n'))
+            resolve(content.split('\r\n'))
         }))
     })
 }
