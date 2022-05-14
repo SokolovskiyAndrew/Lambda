@@ -1,4 +1,4 @@
-const { processGiveAwayResults } = require('./instagram-giveaway/main');
+import { processGiveAwayResults } from './instagram-giveaway/main';
 
 // Task #1: Instagram Giveaway
 processGiveAwayResults();
