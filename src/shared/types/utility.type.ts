@@ -1,1 +1,1 @@
-export type Dictionary = {[key: string]: number }
+export type Dictionary = { [key: string]: number };

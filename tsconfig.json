@@ -1,25 +1,25 @@
 {
-  "compilerOptions": {
-    "module": "commonjs",
-    "esModuleInterop": true,
-    "target": "es2017",
-    "moduleResolution": "node",
-    "sourceMap": true,
-    "outDir": "dist",
-    "strict": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "strictPropertyInitialization": false,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "declaration": false,
-    "downlevelIteration": true,
-    "importHelpers": true,
-    "resolveJsonModule": true,
-    "lib": ["es2018"],
-//    "module": "es2020"
-  },
-  "lib": ["es2015"]
+    "compilerOptions": {
+        "module": "commonjs",
+        "esModuleInterop": true,
+        "target": "es2017",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "outDir": "dist",
+        "strict": true,
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+        "strictPropertyInitialization": false,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "declaration": false,
+        "downlevelIteration": true,
+        "importHelpers": true,
+        "resolveJsonModule": true,
+        "lib": ["es2018"]
+        //    "module": "es2020"
+    },
+    "lib": ["es2015"]
 }
 //{
 //  "compilerOptions": {
