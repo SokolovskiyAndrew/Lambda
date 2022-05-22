@@ -34,3 +34,7 @@ export function objectKeyDeepSearch<T>(inObject: T, inKey: keyof T & string): T[
 
   return lKeyValue;
 }
+
+export function inRange(inSearchValue: number, inStart: number, inEnd: number): boolean {
+  return inStart <= inSearchValue && inSearchValue <= inEnd;
+}
