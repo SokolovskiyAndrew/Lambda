@@ -8,11 +8,11 @@ export function getHashTable<T extends string | number>(inArray: T[]): Dictionar
 }
 
 export function isNil<T>(inValue: T): boolean {
-  return inValue === null && inValue === undefined;
+  return inValue === null || inValue === undefined;
 }
 
 export function isObject<T>(inValue: T): boolean {
-  return !Array.isArray(inValue) && typeof inValue === 'object';
+  return !Array.isArray(inValue) && typeof inValue === 'object' && inValue !== null;
 }
 
 export function objectKeyDeepSearch<T>(inObject: T, inKey: keyof T & string): T[keyof T] | null {
