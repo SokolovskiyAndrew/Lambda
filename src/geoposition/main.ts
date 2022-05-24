@@ -9,7 +9,7 @@ const IP_LOCATION_DB_PATH = `${__dirname}/assets/IP2LOCATION-LITE-DB1.CSV`;
 export const ipLocationRequest = () => {
   const server = app.get('/', async (req, res) => {
     try {
-      const lIpAddress = getIpAddress(req);
+      const lIpAddress = ipAddressToNumber(getIpAddress(req));
       const lLocation: string | null = await findLocationByIp(lIpAddress, IP_LOCATION_DB_PATH);
 
       if (lLocation) {
@@ -27,7 +27,7 @@ export const ipLocationRequest = () => {
   });
 };
 
-const findLocationByIp = (inIpAddress: string, inFilePath: string): Promise<string | null> => {
+const findLocationByIp = (inIpAddress: number, inFilePath: string): Promise<string | null> => {
   return new Promise((inResolve) => {
     const lReadStream = createReadStream(inFilePath, { encoding: 'utf-8' });
     const lReadLine = createInterface({ input: lReadStream });
@@ -36,7 +36,7 @@ const findLocationByIp = (inIpAddress: string, inFilePath: string): Promise<stri
     lReadLine.on('line', (inLine: string) => {
       const [start, end, , countryName] = inLine.replace(/"/g, '').split(',');
 
-      if (inRange(ipAddressToNumber(inIpAddress), Number(start), Number(end))) {
+      if (inRange(inIpAddress, Number(start), Number(end))) {
         lFoundLocation = countryName;
       }
     });
