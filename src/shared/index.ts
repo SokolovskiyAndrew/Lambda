@@ -6,3 +6,6 @@ export * from './utility-funtions';
 
 //http
 export * from './http/functions';
+
+//math
+export * from './math.functions';

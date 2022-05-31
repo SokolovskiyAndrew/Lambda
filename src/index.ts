@@ -1,3 +1,4 @@
+import { runServer } from './correctarium/server';
 import { ipLocationRequest } from './geoposition/main';
 import { processGiveAwayResults } from './instagram-giveaway/main';
 import { jsonSort } from './json-sort/main';
@@ -17,4 +18,6 @@ import { createUserVacationFile } from './vacations-grouped/main';
 //   }
 // })();
 
-ipLocationRequest();
+// ipLocationRequest();
+
+runServer();
