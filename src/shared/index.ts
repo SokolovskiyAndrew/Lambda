@@ -2,10 +2,8 @@
 export * from './types/utility.type';
 
 // Functions
-export * from './utility-funtions';
+export * from './functions/utility-funtions';
+export * from './functions/math.functions';
 
 //http
 export * from './http/functions';
-
-//math
-export * from './math.functions';

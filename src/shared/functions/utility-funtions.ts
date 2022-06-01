@@ -1,4 +1,4 @@
-import { Dictionary } from './types/utility.type';
+import { Dictionary } from '../types/utility.type';
 
 export function getHashTable<T extends string | number>(inArray: T[]): Dictionary<number> {
   return inArray.reduce((inHash: Dictionary<number>, inCurrentEl: T) => {
