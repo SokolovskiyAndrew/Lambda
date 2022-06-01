@@ -1,5 +1,5 @@
 import 'jest';
-import * as utility from '../src/shared/utility-funtions';
+import * as utility from './utility-funtions';
 
 describe('utility-functions', () => {
   describe('getHashTable', () => {

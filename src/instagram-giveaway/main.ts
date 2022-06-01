@@ -2,7 +2,7 @@ import ErrnoException = NodeJS.ErrnoException;
 import { readFile, readdir, createReadStream } from 'fs';
 import { createInterface } from 'readline';
 
-import { getHashTable } from '../shared/utility-funtions';
+import { getHashTable } from '../shared/functions/utility-funtions';
 import { Dictionary } from '../shared/types/utility.type';
 
 const DIR_PATH_200K = `${__dirname}/assets/200k`;
