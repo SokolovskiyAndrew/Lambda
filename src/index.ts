@@ -1,3 +1,5 @@
+import { authorizationServer } from './authorization/server';
+import { isPasswordMatch, passwordCrypt } from './authorization/services';
 import { runServer } from './correctarium/server';
 import { ipLocationRequest } from './geoposition/main';
 import { processGiveAwayResults } from './instagram-giveaway/main';
@@ -20,4 +22,6 @@ import { createUserVacationFile } from './vacations-grouped/main';
 
 // ipLocationRequest();
 
-runServer();
+// runServer();
+
+authorizationServer();
