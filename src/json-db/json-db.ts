@@ -1,13 +1,15 @@
 import express from 'express';
 import CustomRequest from './routes/custom-request.route';
 
-const app = express();
+const jsonDbApp = express();
 const PORT = 4000;
 
-app.use(express.json());
+jsonDbApp.use(express.json());
 
-app.use('/', CustomRequest);
+jsonDbApp.use('/', CustomRequest);
 
 export const jsonDbServer = () => {
-  app.listen(PORT, () => console.log(`Server is running on ${PORT} port`));
+  jsonDbApp.listen(PORT, () => console.log(`Server is running on ${PORT} port`));
 };
+
+export default jsonDbApp;
