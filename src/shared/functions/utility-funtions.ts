@@ -15,6 +15,10 @@ export function isObject<T>(inValue: T): boolean {
   return !Array.isArray(inValue) && typeof inValue === 'object' && inValue !== null;
 }
 
+export const isNumber = (inValue: string): boolean => {
+  return !Number.isNaN(Number(inValue));
+};
+
 export function objectKeyDeepSearch<T>(inObject: T, inKey: keyof T & string): T[keyof T] | null {
   let lKeyValue: T[keyof T] | null = null;
 
