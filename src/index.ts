@@ -5,6 +5,7 @@ import { ipLocationRequest } from './geoposition/main';
 import { processGiveAwayResults } from './instagram-giveaway/main';
 import { jsonDbServer } from './json-db/json-db';
 import { jsonSort } from './json-sort/main';
+import { inquirerStream } from './primitive-db-cli/primitive-db-cli';
 import { createUserVacationFile } from './vacations-grouped/main';
 
 // Task #1: Instagram Giveaway
@@ -23,6 +24,11 @@ import { createUserVacationFile } from './vacations-grouped/main';
 
 // ipLocationRequest();
 
+// runServer();
+
+(async () => {
+  await inquirerStream();
+})();
 // runServer();
 
 // authorizationServer();
